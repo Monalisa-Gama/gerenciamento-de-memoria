@@ -1,8 +1,8 @@
-from src.Util.MemoriaAUX import MemoriaAUX
-from src.Util.Memoria import Memoria
-from src.Util.Processo import Processo
-from src.Util.ProcessoN import ProcessoN
-from src.Util.Arquivo import Arquivo
+from Util.MemoriaAUX import MemoriaAUX
+from Util.Memoria import Memoria
+from Util.Processo import Processo
+from Util.ProcessoN import ProcessoN
+from Util.Arquivo import Arquivo
 
 class AlgoritmosAlocMEMO:
 
