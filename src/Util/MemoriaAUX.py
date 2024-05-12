@@ -1,25 +1,25 @@
 class MemoriaAUX:
-    def __init__(self, idp, tamanho, idm):
+    def __init__(self, idp = None, tamanho = None, idm = None):
         self.idp = idp
         self.tamanho = tamanho
         self.idm = idm
 
-    def get_idp(self):
+    def getIdp(self):
         return self.idp
 
-    def set_idp(self, id):
+    def setIdp(self, id):
         self.idp = id
 
-    def get_idm(self):
+    def getIdm(self):
         return self.idm
 
-    def set_idm(self, id):
+    def setIdm(self, id):
         self.idm = id
 
-    def get_tamanho(self):
+    def getTamanho(self):
         return self.tamanho
 
-    def set_tamanho(self, tamanho):
+    def setTamanho(self, tamanho):
         self.tamanho = tamanho
 
     def __str__(self):

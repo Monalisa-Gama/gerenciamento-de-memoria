@@ -5,28 +5,28 @@ class Memoria:
         self.inicio = inicio
         self.tamanho = tamanho
 
-    def get_id_processo(self):
+    def getIdProcesso(self):
         return self.id_processo
 
-    def set_id_processo(self, id):
+    def setIdProcesso(self, id):
         self.id_processo = id
 
-    def get_estado(self):
+    def getEstado(self):
         return self.estado
 
-    def set_estado(self, estado):
+    def setEstado(self, estado):
         self.estado = estado
 
-    def get_inicio(self):
+    def getInicio(self):
         return self.inicio
 
-    def set_inicio(self, inicio):
+    def setInicio(self, inicio):
         self.inicio = inicio
 
-    def get_tamanho(self):
+    def getTamanho(self):
         return self.tamanho
 
-    def set_tamanho(self, tamanho):
+    def setTamanho(self, tamanho):
         self.tamanho = tamanho
 
     def __str__(self):

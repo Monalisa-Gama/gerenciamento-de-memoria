@@ -1,6 +1,7 @@
-import os
-from src.Util.Memoria import Memoria
-from src.Util.Processo import Processo 
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from Util.Memoria import Memoria
+from Util.Processo import Processo
 
 class Arquivo:
     def __init__(self):
@@ -46,3 +47,5 @@ class Arquivo:
                 file.write(texto + "\n")
         except Exception as e:
             print(e)
+
+

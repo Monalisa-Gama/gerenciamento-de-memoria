@@ -1,8 +1,15 @@
-from src.Util.MemoriaAUX import MemoriaAUX
-from src.Util.Memoria import Memoria
-from src.Util.Processo import Processo
-from src.Util.ProcessoN import ProcessoN
-from src.Util.Arquivo import Arquivo
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from Util.Arquivo import Arquivo
+from Util.Memoria import Memoria
+from Util.MemoriaAUX import MemoriaAUX
+from Util.Processo import Processo
+from Util.ProcessoN import ProcessoN
+ 
+
+
+
 
 class AlgoritmosAlocMEMO:
 
@@ -105,7 +112,7 @@ class AlgoritmosAlocMEMO:
                     y = Processos[i].getComputacao()
                     tamanhoMV = x - y
                     auxMV = MemoriaAUX()
-                    auxMV.setIdP(Processos[i].getId())
+                    auxMV.setIdp(Processos[i].getId())
                     auxMV.setIdm(j)
                     auxMV.setTamanho(tamanhoMV)
                     MemoriaV.append(auxMV)
@@ -142,7 +149,7 @@ class AlgoritmosAlocMEMO:
                     y = Processos[i].getComputacao()
                     tamanhoMV = x - y
                     auxMV = MemoriaAUX()
-                    auxMV.setIdP(Processos[i].getId())
+                    auxMV.setIdp(Processos[i].getId())
                     auxMV.setIdm(j)
                     auxMV.setTamanho(tamanhoMV)
                     MemoriaV.append(auxMV)
@@ -167,18 +174,18 @@ class AlgoritmosAlocMEMO:
 
     @staticmethod
     def escreverArquivo(algoritmo):
-        AlgoritmosAlocMEMO.a.arquivoSaida("Algoritmo " + algoritmo + "\n", algoritmo)
+        AlgoritmosAlocMEMO.a.arquivo_saida("Algoritmo " + algoritmo + "\n", algoritmo)
         for m in AlgoritmosAlocMEMO.MemoriaLIDA:
-            AlgoritmosAlocMEMO.a.arquivoSaida(str(m), algoritmo)
+            AlgoritmosAlocMEMO.a.arquivo_saida(str(m), algoritmo)
 
-        AlgoritmosAlocMEMO.a.arquivoSaida("\nPROCESSOS NÃO ALOCADOS / TAMANHO", algoritmo)
+        AlgoritmosAlocMEMO.a.arquivo_saida("\nPROCESSOS NÃO ALOCADOS / TAMANHO", algoritmo)
         for pnl in AlgoritmosAlocMEMO.ProcessosNALOCADOS:
-            AlgoritmosAlocMEMO.a.arquivoSaida(str(pnl), algoritmo)
+            AlgoritmosAlocMEMO.a.arquivo_saida(str(pnl), algoritmo)
 
     @staticmethod
     def resetDATA():
-        AlgoritmosAlocMEMO.MemoriaLIDA = AlgoritmosAlocMEMO.a.lerArquivo(AlgoritmosAlocMEMO.txtMemoria)
-        AlgoritmosAlocMEMO.ProcessosLIDOS = AlgoritmosAlocMEMO.a.lerArquivo(AlgoritmosAlocMEMO.txtProcessos)
+        AlgoritmosAlocMEMO.MemoriaLIDA = AlgoritmosAlocMEMO.a.ler_arquivo(AlgoritmosAlocMEMO.txtMemoria)
+        AlgoritmosAlocMEMO.ProcessosLIDOS = AlgoritmosAlocMEMO.a.ler_arquivo(AlgoritmosAlocMEMO.txtProcessos)
         AlgoritmosAlocMEMO.ProcessosNALOCADOS = []
 
 if __name__ == "__main__":
