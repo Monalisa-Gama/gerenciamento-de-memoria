@@ -1,4 +1,6 @@
 import os
+from src.Util.Memoria import Memoria
+from src.Util.Processo import Processo 
 
 class Arquivo:
     def __init__(self):
