@@ -29,6 +29,7 @@ class AlgoritmosAlocMEMO:
         print("Rodando First Fit...")
         AlgoritmosAlocMEMO.FirstFIT(AlgoritmosAlocMEMO.MemoriaLIDA, AlgoritmosAlocMEMO.ProcessosLIDOS)
         print("Terminado\n")
+        #Reset dos dados para execução do próximo algoritmo
         AlgoritmosAlocMEMO.resetDATA()
         print("Rodando Next Fit...")
         AlgoritmosAlocMEMO.NextFIT(AlgoritmosAlocMEMO.MemoriaLIDA, AlgoritmosAlocMEMO.ProcessosLIDOS)
@@ -49,12 +50,15 @@ class AlgoritmosAlocMEMO:
     def FirstFIT(Memoria, Processos):
         tamanhoM = -1
         auxN = ProcessoN()
-
+        #loop para percorrer todos os processos
         for processo in Processos:
+            #Loop para percorrer todas as posições de memória
             for memoriaI in Memoria:
+            #Obtém o tamanho da memória
                 tamanhoM = memoriaI.getTamanho()
+                #Se o tamanho for negativo, converte para positivo
                 tamanhoM = -tamanhoM if tamanhoM < 0 else tamanhoM
-
+                #Verifica se a posição de memória está livre e se o processo cabe nela
                 if memoriaI.getEstado() == "H" and processo.getComputacao() <= tamanhoM and processo.getAlocado() == 0:
                     memoriaI.setEstado("P")
                     memoriaI.setIdProcesso(processo.getId())
@@ -62,11 +66,12 @@ class AlgoritmosAlocMEMO:
 
         for p in Processos:
             if p.getAlocado() == 0:
+                #Adiciona processo não alocado à lista de processos não alocados
                 auxN.setId(p.getId())
                 auxN.setTamanho(p.getComputacao())
                 AlgoritmosAlocMEMO.ProcessosNALOCADOS.append(auxN)
             auxN = ProcessoN()
-
+                #Escreve resultados em arquivo
         AlgoritmosAlocMEMO.escreverArquivo("FIRST-FIT")
 
     @staticmethod
