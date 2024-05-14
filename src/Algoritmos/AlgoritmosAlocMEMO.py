@@ -26,8 +26,8 @@ class AlgoritmosAlocMEMO:
         print("DELETE TODOS OS ARQUIVOS DE SAIDA\n")
 
         AlgoritmosAlocMEMO.resetDATA()
-        print("Rodando Frist Fit...")
-        AlgoritmosAlocMEMO.FristFIT(AlgoritmosAlocMEMO.MemoriaLIDA, AlgoritmosAlocMEMO.ProcessosLIDOS)
+        print("Rodando First Fit...")
+        AlgoritmosAlocMEMO.FirstFIT(AlgoritmosAlocMEMO.MemoriaLIDA, AlgoritmosAlocMEMO.ProcessosLIDOS)
         print("Terminado\n")
         AlgoritmosAlocMEMO.resetDATA()
         print("Rodando Next Fit...")
@@ -46,7 +46,7 @@ class AlgoritmosAlocMEMO:
         print("DELETE TODOS OS ARQUIVOS DE SAIDA")
 
     @staticmethod
-    def FristFIT(Memoria, Processos):
+    def FirstFIT(Memoria, Processos):
         tamanhoM = -1
         auxN = ProcessoN()
 
@@ -67,7 +67,7 @@ class AlgoritmosAlocMEMO:
                 AlgoritmosAlocMEMO.ProcessosNALOCADOS.append(auxN)
             auxN = ProcessoN()
 
-        AlgoritmosAlocMEMO.escreverArquivo("FRIST-FIT")
+        AlgoritmosAlocMEMO.escreverArquivo("FIRST-FIT")
 
     @staticmethod
     def NextFIT(Memoria, Processos):
