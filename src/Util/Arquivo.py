@@ -18,7 +18,7 @@ class Arquivo:
                     if line.strip():  # Verifica se a linha não está vazia
                         if ' ' in line:
                             parts = line.split()
-                            m = Memoria(parts[0], int(parts[1]), int(parts[2]), 0)
+                            m = Memoria(parts[0], int(parts[1]), int(parts[2]), ' ')
                             mList.append(m)
                         else:
                             p = Processo(int(line), 0, 0, idProcesso)
