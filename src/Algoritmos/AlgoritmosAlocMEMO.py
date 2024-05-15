@@ -71,7 +71,11 @@ class AlgoritmosAlocMEMO:
                 auxN.setTamanho(p.getComputacao())
                 AlgoritmosAlocMEMO.ProcessosNALOCADOS.append(auxN)
             auxN = ProcessoN()
+       main
                 #Escreve resultados em arquivo
+
+
+       main
         AlgoritmosAlocMEMO.escreverArquivo("FIRST-FIT")
 
     @staticmethod

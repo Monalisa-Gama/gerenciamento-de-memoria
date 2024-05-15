@@ -1,0 +1,32 @@
+Algoritmo FIRST-FIT
+
+(id processo: ),P,0,20
+(id processo:1),P,20,15
+(id processo:5),P,35,7
+(id processo: ),P,42,11
+(id processo:6),P,53,12
+(id processo: ),P,65,7
+(id processo:7),P,72,8
+(id processo: ),H,80,5
+(id processo:10),P,85,10
+(id processo: ),P,95,15
+(id processo:2),P,110,25
+(id processo:11),P,135,9
+(id processo:8),P,144,16
+(id processo: ),P,160,30
+(id processo: ),H,190,3
+(id processo: ),P,193,17
+(id processo: ),H,210,2
+(id processo: ),P,212,5
+(id processo:9),P,217,13
+(id processo: ),H,230,4
+(id processo: ),P,234,14
+(id processo:12),P,248,14
+(id processo: ),P,262,10
+(id processo:4),P,272,18
+(id processo:3),P,290,20
+(id processo: ),P,310,10
+
+PROCESSOS NÃO ALOCADOS / TAMANHO
+id: 13, tamanho: 11
+id: 14, tamanho: 14
